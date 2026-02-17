@@ -153,6 +153,22 @@ VS Code 扩展，用于监控 Google Antigravity AI 模型配额。
 
 ---
 
+### Antigravity 检测原理
+
+Antigravity Cockpit 使用两种方法来检测和监控 Google Antigravity AI 的使用情况：
+
+1. **本地进程检测**：自动扫描系统运行进程，找到 Antigravity Language Server
+   - 支持 Windows、macOS 和 Linux
+   - 三阶段验证流程（进程扫描 → 端口识别 → 连接验证）
+   - 需要本地运行 Antigravity 客户端
+
+2. **授权账号监控**：使用 OAuth 凭证直接从 API 获取配额数据
+   - 无需本地 Antigravity 安装
+   - 支持多账号
+   - 凭证安全存储于 VS Code Secret Storage
+
+**详细技术文档**，请参阅 [ANTIGRAVITY_DETECTION.md](docs/ANTIGRAVITY_DETECTION.md)
+
 ---
 
 ### 自动唤醒 (Auto Wake-up)

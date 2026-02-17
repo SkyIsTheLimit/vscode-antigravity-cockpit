@@ -153,6 +153,22 @@ Sends notifications when model quota falls below warning threshold or is exhaust
 
 ---
 
+### How Antigravity Detection Works
+
+Antigravity Cockpit uses two methods to detect and monitor Google Antigravity AI usage:
+
+1. **Local Process Detection**: Automatically scans running system processes to find the Antigravity Language Server
+   - Supports Windows, macOS, and Linux
+   - Three-stage verification process (process scan → port identification → connection verification)
+   - Requires Antigravity to be running locally
+
+2. **Authorized Account Monitoring**: Uses OAuth credentials to fetch quota data directly from the API
+   - Works without local Antigravity installation
+   - Supports multiple accounts
+   - Credentials stored securely in VS Code Secret Storage
+
+**For detailed technical documentation**, see [ANTIGRAVITY_DETECTION.md](docs/ANTIGRAVITY_DETECTION.md)
+
 ---
 
 ### Auto Wake-up

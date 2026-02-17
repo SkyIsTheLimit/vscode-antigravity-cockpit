@@ -153,8 +153,6 @@ Sends notifications when model quota falls below warning threshold or is exhaust
 
 ---
 
----
-
 ### How Antigravity Detection Works
 
 Antigravity Cockpit uses two methods to detect and monitor Google Antigravity AI usage:
